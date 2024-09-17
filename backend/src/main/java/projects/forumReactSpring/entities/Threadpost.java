@@ -14,24 +14,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Table(name = "Threads")
+@Table(name = "Posts")
 @Setter
 @Getter
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Thread {
+public class Threadpost {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer threadId; 
+	private Integer postId;
 	
 	@Column
-	private Integer userId; 
+	private Integer userId;
 	
 	@Column
-	private String threadName; 
+	private Integer threadId;
 	
 	@Column
-	private Timestamp threadTime;
+	private String postContent; 
+	
+	@Column
+	private Timestamp postTime;
 }
